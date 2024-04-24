@@ -99,9 +99,17 @@ header {
   justify-content: center;
 }
 
+
+
 header h1 {
   font-size: 24px;
 }
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
 
 @media (max-width: 768px) {
   header h1 {
@@ -152,6 +160,12 @@ nav a:hover { /* adiciona uma cor ao passar o mouse por cima*/
 
 
 /* Seções */
+
+#info-squirtle img {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+}
 
 #info-squirtle div {
   display: flex;
@@ -217,6 +231,7 @@ nav a:hover { /* adiciona uma cor ao passar o mouse por cima*/
 
 #evolucao img {
   height: 150px;
+  width: 150px;
 } /* define o tamanho da imagem*/
 
 #evolucao figcaption {
@@ -241,6 +256,11 @@ article {
 }
 
 /* Links */
+
+#recursos a,
+footer a {
+  transition: opacity 0.3s ease-in-out;
+}
 
 a[target='_blank'] {
   color: #4592c4;
@@ -269,6 +289,10 @@ footer {
   
 }
 
+footer p {
+  margin-bottom: 0;
+}
+
 footer a {
   text-decoration: none;   /* Remove o sublinhado padrao do link*/
   transition: color 0.3s ease-in-out;  /* Adiciona uma opacidade */
@@ -290,6 +314,7 @@ footer a[href]:hover {
   opacity: 0.8;
 } /*adiconar uma opacidade*/
 
+/*
 @keyframes fadeIn {
   0% {
     opacity: 0;
