@@ -26,7 +26,11 @@ body {
   font-family: 'Arial', sans-serif;
   color: #333;
   background-color: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
 
 main {/*  O display e o flex foram removidos para ser uma pagina com 2 colunas
   display: flex;/* serve para layout unidemensional, apena uma coluna
@@ -165,7 +169,9 @@ nav a:hover { /* adiciona uma cor ao passar o mouse por cima*/
   width: 150px;
   height: 150px;
   align-self: center;
-}
+} /*usado para definir o tamanho da imagem do squiter e centralizar a imagem no meio*/
+  /* dessa forma quando definimos o tamanho e a localizacao da imagem na pagina,serve para
+  Remover layout shifting no carregamento das imagens;*/
 
 #info-squirtle div {
   display: flex;
@@ -190,13 +196,6 @@ nav a:hover { /* adiciona uma cor ao passar o mouse por cima*/
 /* quando o passa o mouse nas imagens do squirte, quanto da evolucao, o tamanho delas aumenta, utilizando a escala*/
 }
 
-#info-squirtle img {
-  width: 150px;
-  height: 150px;
-  align-self: center;
-} /*usado para definir o tamanho da imagem do squiter e centralizar a imagem no meio*/
-  /* dessa forma quando definimos o tamanho e a localizacao da imagem na pagina,serve para
-  Remover layout shifting no carregamento das imagens;*/
 
   #info-squirtle img:nth-of-type(2) {
     padding: 35px;
@@ -212,6 +211,11 @@ nav a:hover { /* adiciona uma cor ao passar o mouse por cima*/
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+#evolucao a {
+  text-decoration: none;
+  color: black;
 }
 
 #evolucao ul {
@@ -278,7 +282,7 @@ footer {
   background-color: #343a40;
   color: #fff;
   padding: 20px;
-  gap: 12px;
+  bottom: 0;
 
   display: flex;
   flex-direction: column; /*serve para definir a direcao doe itens dentro do container. Column indica que eles serao organizados
@@ -333,3 +337,42 @@ main > article {
  em todos os cards, ao carregar a página.
  Adiciona uma transicao ao carregar a pagina
  Lembrar de desativar o cache*/
+
+
+ /*  flex diretion
+ serve para definir a direcao doe itens dentro do container. Column 
+ indica que eles serao organizados na vertical, de cima para baixo
+   row | row-reverse | column | column-reverse;*/
+
+/*  Flex Wrap: 
+indica como as imagens serao quebradas na proxima linha
+nowrap (padrão): todos os flex items ficarão em uma só linha
+wrap: os flex items vão quebrar em múltiplas linhas, de cima para baixo
+wrap-reverse: os flex items vão quebrar em múltiplas linhas de baixo para cima*/
+
+/*justify-content:
+Esta propriedade define o alinhamento dos ítens ao longo do eixo principal.
+flex-start (padrão): os ítens são alinhados junto à borda de início (start) de acordo com qual for a flex-direction do container.
+flex-end: os ítens são alinhados junto à borda final (end) de acordo com qual for a flex-direction do container.
+start: os ítens são alinhados junto à borda de início da direção do writing-mode (modo de escrita).
+end: os ítens são alinhados junto à borda final da direção do writing-mode (modo de escrita).
+left: os ítens são alinhados junto à borda esquerda do container, a não ser que isso não faça sentido com o flex-direction que estiver sendo utilizado. Nesse caso, se comporta como start.
+right: os ítens são alinhados junto à borda direita do container, a não ser que isso não faça sentido com o flex-direction que estiver sendo utilizado. Nesse caso, se comporta como start.
+center: os ítens são centralizados na linha.
+space-between: os ítens são distribuídos de forma igual ao longo da linha; o primeiro ítem junto à borda inicial da linha, o último junto à borda final da linha.
+space-around: os ítens são distribuídos na linha com o mesmo espaçamento entre eles. Note que, visualmente, o espaço pode não ser igual,
+ uma vez que todos os ítens tem a mesma quantidade de espaço dos dois lados: o primeiro item vai ter somente uma unidade de espaço junto à borda do container, 
+ mas duas unidades de espaço entre ele e o próximo ítem, pois o próximo ítem também tem seu próprio espaçamento que está sendo aplicado.
+space-evenly: os ítens são distribuídos de forma que o espaçamento entre quaisquer dois itens da linha (incluindo entre os ítens e as bordas) seja igual.*/
+
+/* align-items: stretch | flex-start | flex-end | center | baseline;*/
+
+/* align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+  }
+  flex-start / start: ítens alinhados com o início do container. O valor (com maior suporte dos navegadores) flex-start se guia pela flex-direction, enquanto start se guia pela direção do writing-mode.
+flex-end / end: ítens alinhados com o final do container. O valor (com maior suporte dos navegadores) flex-end se guia pela flex-direction, enquanto end se guia pela direção do writing-mode.
+center: ítens centralizados no container.
+space-between: ítens distribuídos igualmente; a primeira linha junto ao início do container e a última linha junto ao final do container.
+space-around: ítens distribuídos igualmente com o mesmo espaçamento entre cada linha.
+space-evenly: ítens distribuídos igualmente com o mesmo espaçamento entre eles.
+stretch (padrão): ítens em cada linha esticam para ocupar o espaço remanescente entre elas*/
